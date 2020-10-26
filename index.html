@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summary</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      background-color: rebeccapurple;
+      font-size: 1.8rem;
+
+      height: 100vh;
+      width: 100vw;
+
+      padding: 0;
+      margin: 0;
+
+      transition: background-color 0.3s linear;
+    }
+
+    a {
+      color: white;
+      padding: .5rem;
+      text-decoration: none;
+
+      font-family: Poppins;
+
+      transition: text-shadow 0.3s;
+    }
+    
+    /* white mode */
+    body.white {
+      background-color: white;
+    }
+
+    body.white a {
+      color: rebeccapurple;
+    }
+    body.white #links a:hover,
+    body.white footer a:hover span {
+      text-shadow: 0 0 10px #66339980 !important;
+    }
+
+    /* links */
+    #links a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #links a:hover,
+    footer a:hover span {
+      text-decoration: underline;
+      text-shadow: 0 0 10px #ffffff80;
+    }
+
+    /* credits */
+    footer {
+      position: relative;
+
+      font-size: 1.2rem;
+
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+    }
+
+    footer::before {
+      content: '';
+      width: 90%;
+      border-top: 1px solid lightblue;
+
+      position: absolute;
+      top: 5px;
+      left: calc(50% - 45%);
+    }
+
+    footer a {
+      padding: .5rem 0 0;
+    }
+
+    /* white/dark mode */
+    .toggle-container {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+    }
+
+    .toggle-container input {
+      visibility: hidden;
+    }
+
+    body.white label {
+      background-color: rebeccapurple;
+    }
+
+    .toggle-container label {
+      background-color: #fff;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      display: inline-block;
+      user-select: none;
+      transition: background 0.3s linear;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- white/dark mode -->
+  <div class="toggle-container">
+    <input type="checkbox" name="toggle" />
+    <label for="toggle" id="toggle"></label>
+  </div>
+
+
+  <!-- projects -->
+  <div id="links">
+    <a href="./hamburger/index.html">Hamburger Button</a>
+    <a href="./toast-notification/index.html">Toast Notification</a>
+    <a href="./auto-write-text/index.html">Auto Write Text</a>
+    <a href="./popup/index.html">Popup / Modal</a>
+    <a href="./purple-heart-rain/index.html">Purple Heart Rain</a>
+    <a href="./background-changer/index.html">Background Changer</a>
+    <a href="./dark-mode/index.html">Dark mode toggle</a>
+    <a href="./carousel/index.html">Carousel</a>
+    <a href="./sound-board/index.html">Sound Board</a>
+    <a href="./zoom-effect/index.html">Zoom effect</a>
+  </div>
+
+
+  <!-- credits -->
+  <footer>
+    <a href="https://github.com/florinpop17/10-projects-1-hour" target="_blank" rel="noopener noreferrer">Created by
+      <span>Florin Pop</span></a>
+
+    <a href="https://github.com/djonibourscheid" target="_blank" rel="noopener noreferrer">Code by <span>Djoni
+        Bourscheid</span></a>
+  </footer>
+
+
+
+  <!-- white/dark mode -->
+  <script>
+    const button = document.getElementById("toggle");
+
+    button.addEventListener("click", () => {
+      document.body.classList.toggle("white");
+    });
+  </script>
+</body>
+
+</html>
