@@ -30,7 +30,7 @@ body {
 }
 
 #btn.open {
-    transform: translateX(-100px);
+    transform: translateX(calc(-7.1rem));
 }
 
 
@@ -74,8 +74,8 @@ body {
 
 #back-to-menu-container {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 1.2rem;
+    left: 1.2rem;
 }
 
 #back-to-menu-container img {
