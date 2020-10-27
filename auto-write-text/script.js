@@ -1,9 +1,10 @@
 const message = "Arrume a postura, e tome água :)" 
+const container = document.querySelector('.message')
 
 let index = 0
 
 function writeText() {
-  document.body.innerText = message.slice(0, index)
+  container.innerText = message.slice(0, index)
 
   index++
 
