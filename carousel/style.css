@@ -23,3 +23,15 @@ body {
     width: 850px;
     transition: transform 1s ease-in-out;
 }
+
+
+#back-to-menu-container {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+#back-to-menu-container img {
+    width: 1.8rem;
+    height: 1.8rem;
+}
