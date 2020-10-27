@@ -38,3 +38,12 @@ body {
     height: 1.8rem;
     margin-right: .5rem;
 }
+
+
+/* RESPONSIVE */
+@media(max-width:1120px) {
+    body {
+        display: flex;
+        flex-direction: column; 
+    }
+}
