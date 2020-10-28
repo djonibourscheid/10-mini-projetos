@@ -29,7 +29,6 @@ body {
     border-radius: 50px;
     height: 3px;
     width: 0;
-    animation: grow 3.5s linear infinite;
 }
 
 @keyframes grow {
