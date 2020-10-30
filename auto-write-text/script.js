@@ -1,4 +1,4 @@
-const message = "Arrume a postura, e tome água :)" 
+const message = "Follow me on GitHub: djonibourscheid :)" 
 const container = document.querySelector('.message')
 
 let index = 0
