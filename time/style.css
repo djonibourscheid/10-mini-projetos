@@ -1,0 +1,101 @@
+/* Layout: https://www.codingnepalweb.com/2020/08/digital-clock-with-colorful-glowing-effect.html */
+
+/* Global */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background-color: black;
+}
+
+::selection {
+    color: unset;
+}
+
+
+/* clock */
+.container {
+    height: 9.5rem;
+    width: 36rem;
+
+    cursor: default;
+    position: relative;
+
+    border-radius: 2rem;
+    background: linear-gradient(135deg, #14ff39, #ffeb3b, #ff00e0);
+
+    animation: raindow 1.5s linear infinite;
+}
+
+.container .display,
+.container span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.display {
+    z-index: 5;
+    background-color: #1b1b1b;
+    border-radius: 1.5rem;
+    
+    height: 8.5rem;
+    width: 35rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#time {
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+
+    background: linear-gradient(135deg, #14ff39, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: raindow 1.5s linear infinite;
+}
+
+@keyframes raindow {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.container span{
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    background: inherit;
+}
+  
+.container span:first-child{
+    filter: blur(7px);
+}
+  
+.container span:last-child{
+    filter: blur(20px);
+}
+
+/* Back to Menu */
+#back-to-menu-container {
+    position: fixed;
+    top: 1.2rem;
+    left: 1.2rem;
+}
+
+#back-to-menu-container img {
+    width: 1.8rem;
+    height: 1.8rem;
+}
