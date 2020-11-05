@@ -17,6 +17,7 @@ body {
 
 #btn {
     font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
     color: white;
     background-color: rebeccapurple;
     cursor: pointer;
