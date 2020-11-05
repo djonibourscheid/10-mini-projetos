@@ -14,7 +14,7 @@ function scrollToIdOnClick(event) {
 
   const navbarHeight = document.querySelector('header').clientHeight;
   const to = getScrollTopByHref(event.target) - navbarHeight;
-  console.log(to)
+
   scrollToPosition(to);
 }
 
