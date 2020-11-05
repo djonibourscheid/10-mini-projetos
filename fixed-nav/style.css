@@ -153,3 +153,14 @@ footer .spans span + span {
     color: white;
     text-shadow: 0 0 20px rgba(255, 255, 255, .4);
 }
+
+
+/* RESPONSIVE */
+@media(max-width: 600px) {
+    footer {
+        flex-direction: column;
+    }
+    .social + .social {
+        margin: 1rem 0 0;
+    }
+}
