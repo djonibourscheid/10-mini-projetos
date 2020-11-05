@@ -19,7 +19,7 @@ function scrollToIdOnClick(event) {
 }
 
 function scrollToPosition(to) {
-  removeMenu();
+  toggleMenu();
   
   window.scroll({
     top: to,
@@ -30,9 +30,9 @@ function scrollToPosition(to) {
 
 // navbar responsive
 const btnEl = document.getElementById('btn-responsive');
-btnEl.addEventListener('click', removeMenu);
+btnEl.addEventListener('click', toggleMenu);
 
-function removeMenu() {
+function toggleMenu() {
   const navEl = document.querySelector('nav');
 
   btnEl.classList.toggle('open');
