@@ -19,8 +19,22 @@ function scrollToIdOnClick(event) {
 }
 
 function scrollToPosition(to) {
+  removeMenu();
+  
   window.scroll({
     top: to,
     behavior: "smooth",
   });
+}
+
+
+// navbar responsive
+const btnEl = document.getElementById('btn-responsive');
+btnEl.addEventListener('click', removeMenu);
+
+function removeMenu() {
+  const navEl = document.querySelector('nav');
+
+  btnEl.classList.toggle('open');
+  navEl.classList.toggle('open');
 }
